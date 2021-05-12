@@ -1,0 +1,30 @@
+<b>Drag the field in box to get its Position !!!</b>
+<ul style="background-color: #C5F3E0 ">
+  <li>bottom: {{p.bottom}}</li>
+  <li>height: {{p.height}}</li>
+  <li>left: {{p.left}}</li>
+  <li>right: {{p.right}}</li>
+  <li>top: {{p.top}}</li>
+  <li>width: {{p.width}}</li>
+  <li>x: {{p.x}}</li>
+  <li>y: {{p.y}}</li>
+</ul>
+
+<div class="example-boundary" style="background-color: #F78EE2 ">
+  <div
+    class="example-box"
+    cdkDragBoundary=".example-boundary"
+    cdkDrag
+    (cdkDragEnded)="onDragEnded($event)"
+  >
+    <input
+      type="email"
+      style="background-color: #A0F6E1 "
+      placeholder="X-axis={{p.x}},Y-axis={{p.y}}"
+    />
+  </div>
+</div>
+
+<!-- Copyright 2020 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->
